@@ -1,0 +1,16 @@
+.my-background {
+  background:
+    radial-gradient(
+      90.16% 143.01% at 15.32% 21.04%,
+      rgba(110, 191, 244, 0.223958) 50%,
+      rgba(0, 120, 199, 0.42) 77.08%,
+      rgba(0, 120, 199, 0.55) 82.93%,
+      #0078C7 100%
+    ),
+    linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0));
+}
+
+
+.active {
+  color: #0078C7 !important;
+}

@@ -1,0 +1,23 @@
+.border-spin {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  animation: borderMove 1.3s linear infinite; /* أسرع و انعم */
+}
+
+@keyframes borderMove {
+  0% {
+    border-color: #0078C7 transparent transparent transparent;
+  }
+  25% {
+    border-color: transparent #0078C7 transparent transparent;
+  }
+  50% {
+    border-color: transparent transparent #0078C7 transparent;
+  }
+  75% {
+    border-color: transparent transparent transparent #0078C7;
+  }
+  100% {
+    border-color: #0078C7 transparent transparent transparent;
+  }
+}

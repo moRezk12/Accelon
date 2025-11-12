@@ -1,0 +1,15 @@
+.bgSection {
+  background-image: url("../../../../assets/Images/RevenuePage/ground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* مهم */
+}
+
+.bgSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #1E1E1EA8; /* اللون اللي بتهديه */
+  z-index: 1;
+}

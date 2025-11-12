@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #F5F8FF !important ;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.btn-gradient {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #F9FAFB;
+  border: 2px solid #0078C7;
+  border-radius: 9999px;
+  background-color: #0078C7;
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 0;
+  transition: all 0.5s ease;
+}
+
+.btn-gradient:hover::before {
+  left: 0;
+}
+
+.btn-gradient span,
+.btn-gradient i {
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s ease;
+}
+
+.btn-gradient:hover span,
+.btn-gradient:hover i {
+  color: #0078C7;
+}
+
+
+@media (min-width: 768px) {
+  .btn-gradient {
+    font-size: 20px;
+  }
+}
+
+
+
+
+.name-title {
+  position: relative;
+  display: inline-block; /* مهم عشان before/after يظهروا بشكل صحيح */
+}
+
+.name-title::before,
+.name-title::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* للتمركز عمودي */
+  width: 20px; /* العرض المطلوب */
+  height: 10px; /* الارتفاع المطلوب */
+  transform: translateY(-50%);
+}
+
+.name-title::before {
+  left: -40px;
+  background: linear-gradient(90deg, rgba(0, 120, 199, 0.09) 0%, rgba(0, 120, 199, 0.69) 100%);
+}
+
+.name-title::after {
+  right: -40px;
+  background: linear-gradient(90deg, rgba(0, 120, 199, 0.69) 0%, rgba(0, 120, 199, 0.09) 100%);
+}

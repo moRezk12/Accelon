@@ -1,0 +1,12 @@
+.card {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 60.72%, rgba(0, 0, 0, 0.66) 80.96%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 50.49%, #0078C7 72.13%),
+    url("../../../../assets/Images/RevenuePage/complete.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 10px;
+}

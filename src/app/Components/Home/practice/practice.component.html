@@ -1,0 +1,38 @@
+<section class="relative overflow-hidden">
+
+  <img
+    class="absolute bottom-[-200px] left-[-200px] w-[180px] md:w-[260px] lg:w-[800px] pointer-events-none select-none"
+    src="../../../../assets/Images/landingPage/Vector (1).png" alt="">
+  <img
+    class="absolute bottom-0 right-0 md:bottom-[-200px] md:right-[-250px] w-[180px] md:w-[260px] lg:w-[800px] pointer-events-none select-none"
+    src="../../../../assets/Images/landingPage/Vector.png" alt="">
+  <img class="absolute top-[-30px] left-[50px] w-[150px] md:w-[200px] lg:w-[350px] pointer-events-none select-none"
+    src="../../../../assets/Images/landingPage/Untitled@2-1536x735 (2) 1.png" alt="">
+
+  <div class="w-[80%]  mx-auto h-[300px] flex justify-center items-center ">
+    <div class="">
+      <div class="title text-center w-full lg:w-[85%] mx-auto ">
+        <p
+          class="text-[#1E1E1E] mt-[20px]  font-semibold text-[24px] md:text-[32px] lg:text-[40px] leading-[100%] lg:leading-[130%] ">
+          {{title}}
+        </p>
+      </div>
+
+      <div class="text-center mt-[20px] w-full lg:w-[90%] mx-auto ">
+        <p
+          class="text-[#333333] font-normal text-[18px] md:text-[20px] lg:text-[24px] leading-[100%] lg:leading-[140%]">
+          {{description}}
+        </p>
+      </div>
+
+      <div class=" w-full lg:w-[90%] mx-auto  text-center mt-[40px]">
+        <button routerLink="/{{url}}" class="btn-gradiented">
+          <span>
+            {{buttonText}}
+          </span>
+          <i class="fas fa-arrow-right -rotate-45 ml-2"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

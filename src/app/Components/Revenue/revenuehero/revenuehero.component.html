@@ -1,0 +1,22 @@
+<section class="h-screen bgSection relative">
+  <div class="container w-full h-full flex justify-center items-center relative z-10">
+    <div class="w-fit text-center">
+      <h2 class="text-[#F9FAFB] font-semibold text-[25px] md:text-[35px] lg:text-[60px] leading-[100%] lg:leading-[130%]">
+        {{title}}
+      </h2>
+      <div class="w-fit mx-auto flex justify-center items-center gap-3 text-[#F9FAFB] mt-[30px]  " >
+        <button  routerLink="/home" class="font-semibold text-[18px] md:text-[20px] lg:text-[24px] leading-[100%] lg:leading-[140%]" >
+          Home
+        </button>
+        <span>
+          <i class="fa-solid fa-chevron-right text-[14px]"></i>
+          <i class="fa-solid fa-chevron-right text-[14px]"></i>
+
+        </span>
+        <button routerLink="/{{url}}" class="font-semibold text-[18px] md:text-[20px] lg:text-[24px] leading-[100%] lg:leading-[140%]" >
+          {{subtitle}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

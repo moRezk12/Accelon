@@ -1,0 +1,47 @@
+<section>
+
+  <div class=" container flex flex-col lg:flex-row justify-between mt-[30px] items-center ">
+
+    <div class="relative text-center w-full md:w-[45%] lg:w-[35%] ">
+      <!-- <img class="absolute w-[500px] top-[-60px] left-[-60px]" src="../../../../assets/Images/medicalContactCenter/health4.png" alt=""> -->
+      <h3
+        class="text-[#1E1E1E] font-semibold text-[24px] md:text-[32px] lg:text-[40px] leading-[100%] lg:leading-[130%]">
+        Frequently Asked Questions
+      </h3>
+    </div>
+    <div class="w-full md:w-[50%] ">
+
+      <div class="space-y-2">
+        <div *ngFor="let faq of faqs"
+          class="bg-[#FFFFFF] border border-[#F1F2F9] rounded-[16px] p-[20px] transition-all duration-300">
+
+          <!-- Header -->
+          <div class="flex justify-between items-center cursor-pointer" (click)="toggleFaq(faq)">
+            <h3 class="text-[#170F49] font-semibold text-[16px] md:text-[18px] lg:text-[20px] leading-[100%]">
+              {{ faq.question }}
+            </h3>
+
+            <div class="w-[35px] h-[35px] max-w-[35px] max-h-[35px] p-2 rounded-full transition-all duration-300 flex justify-center items-center"
+              [ngClass]="faq.open ? 'bg-[#0078C7]' : 'bg-[#F1F2F9]'">
+              <i class="fa-solid text-[16px] md:text-[18px] lg:text-[18px] transition-transform duration-300"
+                [ngClass]="faq.open ? 'fa-chevron-down text-white' : 'fa-chevron-right text-[#170F49]'">
+              </i>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="overflow-hidden transition-all duration-300"
+            [ngClass]="faq.open ? 'max-h-40 mt-3 opacity-100' : 'max-h-0 opacity-0'">
+            <p class="text-[#6F6C90] text-[14px] md:text-[16px]">
+              {{ faq.answer }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
