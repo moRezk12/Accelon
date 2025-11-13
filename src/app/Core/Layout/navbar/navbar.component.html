@@ -8,7 +8,7 @@
     <!-- Desktop Menu -->
     <ul class="my-background p-[20px] rounded-full hidden lg:flex justify-between items-center gap-4">
       <li class="text-[#1E1E1E] cursor-pointer relative group" *ngFor="let section of sections">
-        <a [routerLink]="section.url || '#'" routerLinkActive="active" class="text-[16px] lg:text-[18px] font-bold"
+        <a [routerLink]="section.url" routerLinkActive="active" class="text-[16px] lg:text-[18px] font-bold"
           (click)="section.dropdown ? $event.preventDefault() : null">
           {{ section.label }}
         </a>
@@ -32,7 +32,7 @@
 
   <!-- Mobile Menu -->
   <div
-    class="fixed top-0 left-0 h-full w-fit my-background shadow-lg z-[99999999] transform transition-transform duration-300 ease-in-out lg:hidden"
+    class="fixed top-0 left-0 h-full w-fit bg-[#FFFFFF] shadow-lg z-[99999999] transform transition-transform duration-300 ease-in-out lg:hidden"
     [ngClass]="{
       'translate-x-0 left-0': menuOpen,
       '-translate-x-full left-0': !menuOpen
@@ -46,7 +46,7 @@
       <li class="text-[#1E1E1E] cursor-pointer" *ngFor="let section of sections">
         <div class="flex justify-between items-center"
           (click)="section.dropdown ? toggleDropdown(section) : toggleMenu()">
-          <a [routerLink]="section.url || '#'" routerLinkActive="active" class="text-[16px] lg:text-[18px] font-bold">
+          <a [routerLink]="section.url" routerLinkActive="active" class="text-[16px] lg:text-[18px] font-bold">
             {{ section.label }}
           </a>
           <i *ngIf="section.dropdown" class="fas fa-chevron-down"></i>
