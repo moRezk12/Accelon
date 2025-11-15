@@ -1,6 +1,11 @@
 .border-spin {
   border: 2px solid transparent;
   border-radius: 10px;
+  animation: none;
+}
+
+.group:hover .border-spin  {
+
   animation: borderMove 1.3s linear infinite; /* أسرع و انعم */
 }
 

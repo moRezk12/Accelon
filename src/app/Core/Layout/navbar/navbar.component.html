@@ -1,4 +1,4 @@
-<header [ngClass]="{'bg-[#FFFFFF]': showScrollBackGround}" class="header fixed w-full left-0 right-0 top-0 z-[9999999]">
+<header [ngClass]="{'bg-gray-200': showScrollBackGround}" class="header fixed w-full left-0 right-0 top-0 z-[9999999]">
   <div class="container flex justify-between items-center">
     <!-- Logo -->
     <div class="image w-[140px] md:w-[180px]">
@@ -8,7 +8,7 @@
     <!-- Desktop Menu -->
     <ul class="my-background p-[20px] rounded-full hidden lg:flex justify-between items-center gap-4">
       <li class="text-[#1E1E1E] cursor-pointer relative group" *ngFor="let section of sections">
-        <a [routerLink]="section.url" routerLinkActive="active" class="text-[16px] lg:text-[18px] font-bold"
+        <a [routerLink]="section.url" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" (click)="scrollToTop()" class="text-[16px] leading-[16px] font-bold"
           (click)="section.dropdown ? $event.preventDefault() : null">
           {{ section.label }}
         </a>
@@ -17,7 +17,7 @@
         <ul *ngIf="section.dropdown"
           class="absolute left-0 top-full w-fit bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
           <li *ngFor="let item of section.dropdown" class="px-4 py-2 hover:bg-gray-100 cursor-pointer text-[#1E1E1E]">
-            <a [routerLink]="item.url" class="whitespace-nowrap">{{ item.label }}</a>
+            <a [routerLink]="item.url" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" (click)="scrollToTop()" class="whitespace-nowrap">{{ item.label }}</a>
           </li>
         </ul>
 

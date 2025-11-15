@@ -45,7 +45,7 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
-    
+
   }
 
   // For mobile dropdowns
@@ -67,7 +67,13 @@ export class NavbarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.showScrollBackGround = window.pageYOffset > 250;
+    this.showScrollBackGround = window.pageYOffset > 50;
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+
 
 }
