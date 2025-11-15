@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,20 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
 
   showScrollButton = false;
+    ngOnInit() {
+    AOS.init({
+      once: false,
+      easing: 'ease-in-out',
+      offset: 0,
+      startEvent: 'DOMContentLoaded',
+    });
+  }
+
+  // استخدام event listener للـ scroll
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    AOS.refresh();
+  }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -17,6 +32,8 @@ export class AppComponent {
   onWindowScroll() {
     this.showScrollButton = window.pageYOffset > 250;
   }
+
+
 
 
 }
